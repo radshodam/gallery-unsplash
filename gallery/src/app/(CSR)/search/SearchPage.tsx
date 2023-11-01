@@ -66,10 +66,10 @@ export default function SearchPage() {
       {searchResults && (
         <>
           <div className="w-full flex flex-wrap py-16">
-            {searchResults.map((image, index) => (
+            {searchResults.map((image) => (
               <div
                 className="w-1/2 rounded-md p-0.5 shadow-white shadow-sm"
-                key={index}
+                key={image.id}
               >
                 <Image
                   src={image.urls.raw}

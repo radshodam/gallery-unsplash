@@ -1,5 +1,6 @@
 export interface UnsplashImage {
   description: string;
+  id: string;
   urls: {
     raw: string;
   };
@@ -11,5 +12,5 @@ export interface UnsplashImage {
 }
 
 export interface UnsplashSearchResponse {
-  results: UnsplashImage[],
+  results: UnsplashImage[];
 }
