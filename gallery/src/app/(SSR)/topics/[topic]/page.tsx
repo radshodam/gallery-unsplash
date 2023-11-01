@@ -46,14 +46,16 @@ export default async function Page({ params: { topic } }: PageProps) {
 
             <h1>{topic}</h1>
             <div className="w-full flex flex-wrap py-16">
-              {images.map((image) => (
-                <div className="w-1/2 rounded-md p-0.5 shadow-white shadow-sm">
+              {images.map((image, index) => (
+                <div
+                  className="w-1/2 rounded-md p-0.5 shadow-white shadow-sm"
+                  key={index}
+                >
                   <Image
                     src={image.urls.raw}
                     width={250}
                     height={250}
                     alt={image.description}
-                    key={image.urls.raw}
                     className="w-full max-w-md h-full object-cover"
                   />
                 </div>
