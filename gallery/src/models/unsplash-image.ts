@@ -9,3 +9,7 @@ export interface UnsplashImage {
     username: string;
   };
 }
+
+export interface UnsplashSearchResponse {
+  results: UnsplashImage[],
+}

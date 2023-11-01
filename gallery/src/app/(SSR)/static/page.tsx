@@ -12,10 +12,13 @@ export default async function Page() {
   const height = (width / image.width) * image.height;
 
   return (
-    <div className=" container">
+    <div>
+      <p>
+        This page <strong>fetches and caches data at build time</strong>. Even though
+        the Unsplash API always returns a new image, we see the same image after
+        refreshing the page until we compile the project again.
+      </p>
       <Image
-        placeholder="empty"
-        priority={false} 
         className="rounded-md"
         alt={image.description}
         src={image.urls.raw}
